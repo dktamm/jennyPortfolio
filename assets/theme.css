@@ -60,3 +60,12 @@ header .brand{font-size:23px;font-weight:400;letter-spacing:-.04em;white-space:n
 :root{--paper:#f0eee8;--line:#d7d3c9}
 :root[data-theme="dark"]{--paper:#242421;--line:#484940}
 body{background-color:var(--paper);background-image:radial-gradient(#88888814 .65px,transparent .65px);background-size:5px 5px}
+
+/* Shared project introduction alignment, independent of copy length. */
+.case .case-intro{display:grid;grid-template-columns:minmax(0,1fr) 340px;align-items:start;gap:clamp(30px,4vw,64px)}
+.case .case-intro>div{min-width:0}
+.case .case-intro>p{width:100%;max-width:none;margin:0;padding-top:10px}
+@media(max-width:900px){
+ .case .case-intro{grid-template-columns:1fr;gap:24px}
+ .case .case-intro>p{max-width:640px;padding-top:0}
+}
